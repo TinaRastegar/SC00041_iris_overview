@@ -17,5 +17,10 @@ g.map_diag(sns.histplot)
 g.map_offdiag(sns.scatterplot)
 g.add_legend()
 
-# save plot
-g.figure.savefig("/home/xaemmo/teaching/reproducible_code/assignment_repos/output.png")
+# create output folder
+output_dir = Path("output")
+output_dir.mkdir(exist_ok=True)
+
+# save plot without hardcoding full path
+g.figure.savefig(output_dir / "iris_plot.png")
+
