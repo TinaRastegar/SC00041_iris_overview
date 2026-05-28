@@ -2,11 +2,16 @@
 # import seaborn package 
 import seaborn as sns
 
+# import datetime package
+from datetime import datetime
+
 # load the iris dataset
 iris = sns.load_dataset("iris")
 
-# TODO: Import datetime and create timestamp for plot file
+# create timestamp for plot file
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
+# create plot
 g = sns.PairGrid(iris, hue="species")
 g.map_diag(sns.histplot)
 g.map_offdiag(sns.scatterplot)
