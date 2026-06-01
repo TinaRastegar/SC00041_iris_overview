@@ -1,7 +1,12 @@
 # SC00041 iris overview
 
-### Purpose
-This project creates a pairwise visualization of the relationships among the numeric vaiables in the classic Iris dataset 
+### Objective
+This script analyzes the Iris dataset, a classic dataset widely used for data analysis and machine learning tasks. The dataset contains measurements from 150 iris flowers belonging to three species:
+
+* Iris setosa
+* Iris versicolor
+* Iris virginica
+
 
 ## What the script does
 
@@ -9,36 +14,31 @@ The script:
 - Loads the built-in Iris dataset
 - Creates a `PairGrid` grouped by species
 - Draws scatterplots on the off-diagonal panels
-- Adds a legend for species
-- Saves the figure 
 
-## script
+## Iris dataset 
+First 5 rows
 
-# python read iris dataset and do stuff
-# import seaborn package 
-import seaborn as sns
+| sepal length (cm) | sepal width (cm) | petal length (cm) | petal width (cm) | target | species |
+|-------------------|------------------|-------------------|------------------|--------|---------|
+| 5.1 | 3.5 | 1.4 | 0.2 | 0 | setosa |
+| 4.9 | 3.0 | 1.4 | 0.2 | 0 | setosa |
+| 4.7 | 3.2 | 1.3 | 0.2 | 0 | setosa |
+| 4.6 | 3.1 | 1.5 | 0.2 | 0 | setosa |
+| 5.0 | 3.6 | 1.4 | 0.2 | 0 | setosa |
 
-# import datetime package
-from datetime import datetime
+### Description of Variables
 
-# load the iris dataset
-iris = sns.load_dataset("iris")
+- **sepal length (cm):** Length of the sepal in centimeters.
+- **sepal width (cm):** Width of the sepal in centimeters.
+- **petal length (cm):** Length of the petal in centimeters.
+- **petal width (cm):** Width of the petal in centimeters.
+- **target:** Numeric class label.
+  - 0 = setosa
+  - 1 = versicolor
+  - 2 = virginica
+- **species:** Species name corresponding to the target label.
 
-# create timestamp for plot file
-timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-# create plot
-g = sns.PairGrid(iris, hue="species")
-g.map_diag(sns.histplot)
-g.map_offdiag(sns.scatterplot)
-g.add_legend()
-
-# create output folder
-output_dir = Path("output")
-output_dir.mkdir(exist_ok=True)
-
-# save plot without hardcoding full path
-g.figure.savefig(output_dir / "iris_plot.png")
 
 
 ## Requirements
