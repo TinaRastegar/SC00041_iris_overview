@@ -1,26 +1,25 @@
-# python read iris dataset and do stuff
-# import seaborn package 
-import seaborn as sns
-
-# import datetime package
+# Import packages
+from pathlib import Path
 from datetime import datetime
 
-# load the iris dataset
+import seaborn as sns
+
+# Load the iris dataset from seaborn
 iris = sns.load_dataset("iris")
 
-# create timestamp for plot file
+# Create timestamp for plot file
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-# create plot
+# Create plot
 g = sns.PairGrid(iris, hue="species")
 g.map_diag(sns.histplot)
 g.map_offdiag(sns.scatterplot)
 g.add_legend()
 
-# create output folder
+# Create output folder
 output_dir = Path("output")
 output_dir.mkdir(exist_ok=True)
 
-# save plot without hardcoding full path
-g.figure.savefig(output_dir / "iris_plot.png")
+# Save plot with timestamp
+g.figure.savefig(output_dir / f"iris_plot_{timestamp}.png")
 
