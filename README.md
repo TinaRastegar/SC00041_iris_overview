@@ -53,14 +53,12 @@ Example of the first five rows:
 
 The script requires Python and the following packages:
 
-- `seaborn`
-- `matplotlib`
+  - `python=3.11`
+  - `pandas`
+  - `matplotlib`
+  - `seaborn`
+  - `scikit-learn`
 
-Install the required packages with:
-
-```bash
-pip install seaborn matplotlib
-```
 
 ## How to run
 
@@ -70,6 +68,16 @@ Clone the repository:
 git clone https://github.com/TinaRastegar/SC00041_iris_overview.git
 cd SC00041_iris_overview
 ```
+Create the environmenet:
+
+```bash
+conda env create -f environment.yml
+```
+Activate the environment
+
+```bash
+conda activate sc00041-iris-overview
+```
 
 Run the script:
 
@@ -77,7 +85,7 @@ Run the script:
 python iris_overview.py
 ```
 
-If your system uses Python 3 .
+Expected output: 
 
 ```text
 output/iris_plot_20260603_110230.png
