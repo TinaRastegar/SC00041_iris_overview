@@ -1,0 +1,9 @@
+name: sc00041-iris-overview
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
