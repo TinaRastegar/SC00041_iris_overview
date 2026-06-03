@@ -77,23 +77,7 @@ Run the script:
 python iris_overview.py
 ```
 
-If your system uses Python 3 explicitly, run:
-
-```bash
-python3 iris_overview.py
-```
-
-## Output
-
-The script creates an `output` folder and saves the plot as a PNG image.
-
-If using a fixed filename, the output is:
-
-```text
-output/iris_plot.png
-```
-
-If using a timestamped filename, the output will look like:
+If your system uses Python 3 .
 
 ```text
 output/iris_plot_20260603_110230.png
