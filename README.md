@@ -21,44 +21,6 @@ The script:
 - Adds a legend showing the species
 - Saves the resulting plot as a PNG file in the `output` folder
 
-## Iris dataset
-
-The dataset includes the following variables:
-
-| Variable | Description |
-|---|---|
-| `sepal_length` | Length of the sepal |
-| `sepal_width` | Width of the sepal |
-| `petal_length` | Length of the petal |
-| `petal_width` | Width of the petal |
-| `species` | Iris species name |
-
-The species are:
-
-- `setosa`
-- `versicolor`
-- `virginica`
-
-Example of the first five rows:
-
-| sepal_length | sepal_width | petal_length | petal_width | species |
-|---:|---:|---:|---:|---|
-| 5.1 | 3.5 | 1.4 | 0.2 | setosa |
-| 4.9 | 3.0 | 1.4 | 0.2 | setosa |
-| 4.7 | 3.2 | 1.3 | 0.2 | setosa |
-| 4.6 | 3.1 | 1.5 | 0.2 | setosa |
-| 5.0 | 3.6 | 1.4 | 0.2 | setosa |
-
-## Requirements
-
-The script requires Python and the following packages:
-
-  - `python=3.11`
-  - `pandas`
-  - `matplotlib`
-  - `seaborn`
-  - `scikit-learn`
-
 
 ## How to run
 
@@ -93,12 +55,6 @@ output/iris_plot_20260603_110230.png
 
 The plot visualizes relationships between Iris flower measurements. Points are colored by species.
 
-## Notes
-
-- `PairGrid` gives more control than `sns.pairplot()` when customizing figures.
-- The Iris dataset is loaded directly from Seaborn, so no separate dataset download is needed.
-- Saving the plot in an `output` folder keeps generated files separate from the source code.
-- Using a timestamp in the filename helps avoid overwriting previous plots.
 
 ## License
 
